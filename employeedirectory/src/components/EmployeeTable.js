@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import employeeData from '../employeeNames.json';
+import employeeData from '../employees.json';
 
 
 export default function Layout(props) {
