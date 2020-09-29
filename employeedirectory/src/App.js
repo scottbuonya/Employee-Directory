@@ -1,39 +1,28 @@
 import React from 'react';
 import './App.css';
-import results from './names.json';
+import 'react-bootstrap/Row';
+import 'react-bootstrap/Col';
 
-class App extends React.Component  {
- state={
-   nameList: results
- }
-  render() { 
+function App() {
+    
     return (
       <>
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">first</th>
-              <th scope="col">last</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.nameList.map(name=>(
-            <tr>
-
-
-            <th scope="row">{results}</th>
-              <td>{results.name}</td>
-              <td>{results.location}</td>
-              <td>{results.picture}</td>
-            </tr>
-
-            ))}
-          </tbody>
-        </table>
-      </>
+        <Nav />
+        <Layout>
+          <Row >
+            <Col>
+              <Search></Search>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <EmployeeTable></EmployeeTable>
+            </Col>
+          </Row>
+        </Layout>
+      </> 
   );
- }
+  
 
 }
 
